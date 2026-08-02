@@ -1,69 +1,6 @@
 {
   "items": [
     {
-      "id": "DYtF4G8Al8g",
-      "instagram_url": "https://www.instagram.com/reel/DYtF4G8Al8g/",
-      "thumbnail": "https://instagram.fcgh12-1.fna.fbcdn.net/v/t51.71878-15/703861623_1536474891240349_3632372682144407415_n.jpg",
-      "mediaType": "VIDEO",
-      "date": "2026-05-23",
-      "title": "Flaco López gela o Flamengo",
-      "captionShort": "Fica frio aí! O Flaco López esbanjou frieza no gol contra o Flamengo.",
-      "caption": "FICA FRIO AÍ! O FLACO LÓPEZ ESBANJOU FRIEZA NO GOL CONTRA O FLAMENGO! #FutebolBrasileiro #Brasileirão",
-      "competitions": [
-        "brasileirao"
-      ],
-      "partners": [
-        "tnt"
-      ]
-    },
-    {
-      "id": "DYstHt5iUox",
-      "instagram_url": "https://www.instagram.com/reel/DYstHt5iUox/",
-      "thumbnail": "https://instagram.fcgh38-1.fna.fbcdn.net/v/t51.71878-15/704914086_1075354715670249_2537475016952572348_n.jpg",
-      "mediaType": "VIDEO",
-      "date": "2026-05-23",
-      "title": "Barrera empata para o Fogão",
-      "captionShort": "Que pintura do Barrera! Gol de empate do Botafogo no Morumbis.",
-      "caption": "QUE PINTURA DO BARRERA! O jogador do Botafogo acertou em cheio para marcar o gol de empate do Fogão no Morumbis! #FutebolBrasileiro #Brasileirão",
-      "competitions": [
-        "brasileirao"
-      ],
-      "partners": [
-        "tnt",
-        "botafogo"
-      ]
-    },
-    {
-      "id": "DXIYOirAB6W",
-      "instagram_url": "https://www.instagram.com/reel/DXIYOirAB6W/",
-      "thumbnail": "https://instagram.fcgh12-1.fna.fbcdn.net/v/t51.71878-15/671068286_1313973830591979_7179855534106107184_n.jpg",
-      "mediaType": "VIDEO",
-      "date": "2026-04-14",
-      "title": "O show do Neymar pelo Santos",
-      "captionShort": "O Neymar é Santos pra caramba! Será que hoje tem show dele?",
-      "caption": "O NEYMAR É SANTOS PRA CARALHO! Será que hoje tem show dele? #FutebolBrasileiro",
-      "competitions": [
-        "brasileirao"
-      ],
-      "partners": [
-        "tnt"
-      ]
-    },
-    {
-      "id": "DWtV_NVDNq3",
-      "instagram_url": "https://www.instagram.com/reel/DWtV_NVDNq3/",
-      "thumbnail": "https://instagram.fcgh38-1.fna.fbcdn.net/v/t51.71878-15/658926878_2109335013298051_1278404447711665910_n.jpg",
-      "mediaType": "VIDEO",
-      "date": "2026-04-04",
-      "title": "Entrar em campo com o ídolo",
-      "captionShort": "É só um jogo, dizem. O que significa entrar em campo com o seu ídolo.",
-      "caption": "It's just a game, they say. What it means to enter the pitch with your idol.",
-      "competitions": [],
-      "partners": [
-        "fabrizio"
-      ]
-    },
-    {
       "id": "local-433-1",
       "localVideo": "assets/videos/433/v01.mp4",
       "mediaType": "VIDEO",
