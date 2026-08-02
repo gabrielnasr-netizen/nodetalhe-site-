@@ -1,0 +1,102 @@
+{
+  "collections": [
+    {
+      "type": "competition",
+      "key": "copa-mundo",
+      "name": "Copa do Mundo FIFA",
+      "tag": "Internacional · Seleções",
+      "match": { "hashtags": ["#copadomundo", "#worldcup", "#fifaworldcup", "#selecaobrasileira"] }
+    },
+    {
+      "type": "competition",
+      "key": "libertadores",
+      "name": "Libertadores",
+      "tag": "Conmebol · Clubes",
+      "match": { "hashtags": ["#libertadores", "#conmebollibertadores"] }
+    },
+    {
+      "type": "competition",
+      "key": "brasileirao",
+      "name": "Campeonato Brasileiro",
+      "tag": "CBF · Série A",
+      "match": { "hashtags": ["#brasileirao", "#serieA"] }
+    },
+    {
+      "type": "competition",
+      "key": "copa-brasil",
+      "name": "Copa do Brasil",
+      "tag": "CBF · Mata-mata",
+      "match": { "hashtags": ["#copadobrasil"] }
+    },
+    {
+      "type": "competition",
+      "key": "eliminatorias",
+      "name": "Eliminatórias",
+      "tag": "Conmebol · Rumo à Copa",
+      "match": { "hashtags": ["#eliminatorias", "#rumoacopa"] }
+    },
+    {
+      "type": "competition",
+      "key": "selecao",
+      "name": "Seleção Brasileira",
+      "tag": "CBF · Amistosos e torneios",
+      "match": { "hashtags": ["#selecaobrasileira", "#cbf"] }
+    },
+    {
+      "type": "competition",
+      "key": "internacionais",
+      "name": "Jogos Internacionais",
+      "tag": "Turnês · Amistosos globais",
+      "match": { "hashtags": ["#amistosointernacional"] }
+    },
+    {
+      "type": "competition",
+      "key": "paulistao",
+      "name": "Paulistão",
+      "tag": "FPF · Estadual",
+      "match": { "hashtags": ["#paulistao"] }
+    },
+    {
+      "type": "competition",
+      "key": "sua-foto-no-jogo",
+      "name": "Sua Foto no Jogo",
+      "tag": "Nodetalhe · Experiência do torcedor",
+      "match": { "hashtags": ["#suafotonojogo"] }
+    },
+    {
+      "type": "partner",
+      "key": "433",
+      "name": "433",
+      "tag": "Collab · Mídia esportiva",
+      "match": { "hashtags": ["#433"] }
+    },
+    {
+      "type": "partner",
+      "key": "cbf",
+      "name": "CBF",
+      "tag": "Collab · Confederação",
+      "match": { "hashtags": ["#cbf"] }
+    },
+    {
+      "type": "partner",
+      "key": "botafogo",
+      "name": "Botafogo",
+      "tag": "Collab · Clube",
+      "match": { "hashtags": ["#botafogo", "#bfr"] }
+    },
+    {
+      "type": "partner",
+      "key": "fabrizio",
+      "name": "Fabrizio Romano",
+      "tag": "Collab · Jornalismo esportivo",
+      "match": { "hashtags": ["#fabrizioromano"] }
+    },
+    {
+      "type": "partner",
+      "key": "tnt",
+      "name": "TNT Sports",
+      "tag": "Collab · Transmissão",
+      "match": { "hashtags": ["#tntsports"] }
+    }
+  ]
+}

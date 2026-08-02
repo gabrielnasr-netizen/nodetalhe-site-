@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nodetalhe Content: o futebol passa rápido, os detalhes ficam.</title>
+<meta name="description" content="Nodetalhe Content é uma produtora especializada em vídeo e criação de conteúdo esportivo, com foco no futebol. Transformamos jogos, bastidores e grandes momentos em conteúdos que geram alcance, conexão e resultado.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://nodetalhecontent.com/">
+
+<!-- Favicon: símbolo oficial da marca -->
+<link rel="icon" type="image/png" href="assets/ND_badge_yellowblack.png">
+<link rel="apple-touch-icon" href="assets/ND_badge_yellowblack.png">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn...) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nodetalhe Content">
+<meta property="og:title" content="Nodetalhe Content: o futebol passa rápido, os detalhes ficam.">
+<meta property="og:description" content="Produtora especializada em vídeo e criação de conteúdo esportivo, com foco no futebol. Cobertura de Copa do Mundo, Libertadores, Brasileirão e Seleção Brasileira.">
+<meta property="og:image" content="https://nodetalhecontent.com/assets/ND_badge_yellowblack.png">
+<meta property="og:url" content="https://nodetalhecontent.com/">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nodetalhe Content: o futebol passa rápido, os detalhes ficam.">
+<meta name="twitter:description" content="Produtora especializada em vídeo e criação de conteúdo esportivo, com foco no futebol.">
+<meta name="twitter:image" content="https://nodetalhecontent.com/assets/ND_badge_yellowblack.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://www.instagram.com/embed.js"></script>
+<style>
+  :root{
+    --black:#0a0a0a;
+    --black-2:#111113;
+    --black-3:#161618;
+    --line:#232326;
+    --line-2:#2c2c30;
+    --yellow:#feca40;
+    --yellow-dim:#7a6224;
+    --white:#f5f5f3;
+    --gray:#98989f;
+    --gray-dim:#606066;
+    --display: 'Anton', 'Arial Narrow', sans-serif;
+    --body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --ease: cubic-bezier(.16,.84,.44,1);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:var(--body);
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--yellow);color:var(--black);}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+
+  .wrap{max-width:1280px;margin:0 auto;padding:0 40px;}
+  @media(max-width:768px){.wrap{padding:0 22px;}}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--yellow);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow .dot{
+    width:6px;height:6px;border-radius:50%;background:var(--yellow);
+    box-shadow:0 0 0 3px rgba(254,202,64,.18);
+    flex:none;
+  }
+  .eyebrow .dot.pulse{animation:dotpulse 1.8s ease-in-out infinite;}
+  @keyframes dotpulse{
+    0%,100%{box-shadow:0 0 0 3px rgba(254,202,64,.18);}
+    50%{box-shadow:0 0 0 7px rgba(254,202,64,.08);}
+  }
+  .hl{color:var(--yellow);}
+
+  h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.98;letter-spacing:.005em;}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease), transform .9s var(--ease);}
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
+  .reveal-delay-1{transition-delay:.08s;}
+  .reveal-delay-2{transition-delay:.16s;}
+  .reveal-delay-3{transition-delay:.24s;}
+  .reveal-delay-4{transition-delay:.32s;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001ms !important; transition-duration:.001ms !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+
+  /* ---------- nav ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:22px 0;
+    transition:background .4s var(--ease), border-color .4s var(--ease), padding .4s var(--ease);
+    border-bottom:1px solid transparent;
+  }
+  header.scrolled{
+    background:rgba(10,10,10,.82);
+    backdrop-filter:blur(10px);
+    border-color:var(--line);
+    padding:14px 0;
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:11px;}
+  .brand-badge{width:28px;height:28px;}
+  .brand-word{height:15px;width:auto;}
+  .brand-badge, .brand-word{opacity:0;animation:brand-intro .8s var(--ease) forwards;}
+  .brand-word{animation-delay:.12s;}
+  @keyframes brand-intro{
+    from{opacity:0;transform:translateY(-6px) scale(.94);}
+    to{opacity:1;transform:translateY(0) scale(1);}
+  }
+  .nav-links{display:flex;align-items:center;gap:38px;}
+  .nav-links a{
+    font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--gray);position:relative;padding:4px 0;
+    transition:color .3s;
+  }
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--yellow);
+    transition:width .3s var(--ease);
+  }
+  .nav-links a:hover{color:var(--white);}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{
+    font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--black);background:var(--yellow);padding:11px 20px;border-radius:2px;
+    transition:transform .3s var(--ease), background .3s;
+  }
+  .nav-cta:hover{background:var(--white);transform:translateY(-2px);}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;z-index:101;position:relative;}
+  .burger span{width:22px;height:1.5px;background:var(--white);display:block;transition:transform .35s var(--ease), opacity .35s var(--ease);}
+  .burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+  .burger.open span:nth-child(2){opacity:0;}
+  .burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+  @media(max-width:860px){
+    .nav-links{display:none;}
+    .burger{display:flex;}
+  }
+
+  .mobile-menu{
+    position:fixed;inset:0;background:var(--black);z-index:99;
+    display:flex;flex-direction:column;justify-content:center;gap:26px;padding:0 32px;
+    transform:translateY(-100%);transition:transform .5s var(--ease);
+  }
+  .mobile-menu.open{transform:translateY(0);}
+  .mobile-menu a{font-family:var(--display);font-size:34px;text-transform:uppercase;color:var(--white);}
+  .mobile-menu .nav-cta{width:max-content;margin-top:10px;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+    padding:150px 0 60px;overflow:hidden;
+  }
+  .hero-photo{
+    position:absolute;inset:0;background-image:url('assets/photos/stadium-floodlight-paok.jpg');
+    background-size:cover;background-position:center 30%;
+    filter:grayscale(1) contrast(1.15) brightness(.55);
+    opacity:.55;pointer-events:none;
+  }
+  .hero-photo::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(10,10,10,.35) 0%, var(--black) 92%),
+               linear-gradient(90deg, var(--black) 0%, rgba(10,10,10,.15) 40%, rgba(10,10,10,.55) 100%);
+  }
+  .hero-noise{
+    position:absolute;inset:0;background-image:url('assets/textura.jpg');background-size:420px;
+    opacity:.05;pointer-events:none;
+  }
+  .hero-glow{
+    position:absolute;top:-20%;right:-10%;width:60vw;height:60vw;max-width:800px;max-height:800px;
+    background:radial-gradient(circle,rgba(254,202,64,.10) 0%,rgba(254,202,64,0) 70%);
+    pointer-events:none;
+  }
+  .hero-badge{
+    position:absolute;right:6%;top:18%;width:200px;opacity:.9;
+    animation:spin-slow 46s linear infinite;
+    pointer-events:none;
+  }
+  @keyframes spin-slow{to{transform:rotate(360deg);}}
+  @media(max-width:1000px){.hero-badge{width:120px;top:12%;right:4%;opacity:.55;}}
+
+  .hero-inner{position:relative;z-index:2;}
+  .hero h1{
+    font-size:clamp(46px,8.4vw,118px);
+    line-height:1.12;
+    color:var(--white);
+    max-width:16ch;
+  }
+  .hero h1 em{font-style:normal;color:var(--yellow);}
+  .hero-sub{
+    font-size:17px;color:var(--gray);max-width:520px;margin-top:28px;line-height:1.6;
+  }
+  .hero-actions{display:flex;gap:16px;margin-top:44px;flex-wrap:wrap;}
+  .btn{
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;
+    padding:16px 30px;border-radius:2px;display:inline-flex;align-items:center;gap:10px;
+    transition:transform .35s var(--ease), background .3s, color .3s, border-color .3s;
+  }
+  .btn-primary{background:var(--yellow);color:var(--black);}
+  .btn-primary:hover{transform:translateY(-3px);background:var(--white);}
+  .btn-ghost{border:1px solid var(--line-2);color:var(--white);}
+  .btn-ghost:hover{border-color:var(--yellow);color:var(--yellow);transform:translateY(-3px);}
+
+  .hero-stat{
+    margin-top:88px;display:flex;align-items:flex-end;gap:22px;border-top:1px solid var(--line);padding-top:26px;
+    max-width:520px;
+  }
+  .hero-stat .num{font-family:var(--mono);font-size:44px;font-weight:600;color:var(--yellow);letter-spacing:-.02em;}
+  .hero-stat .lbl{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--gray);text-transform:uppercase;padding-bottom:8px;}
+
+  .scroll-cue{
+    position:absolute;bottom:34px;left:50%;transform:translateX(-50%);
+    display:flex;flex-direction:column;align-items:center;gap:10px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--gray-dim);text-transform:uppercase;
+  }
+  .scroll-cue .line{width:1px;height:36px;background:linear-gradient(var(--gray-dim),transparent);animation:scrollpulse 2s ease-in-out infinite;}
+  @keyframes scrollpulse{0%,100%{opacity:.3;}50%{opacity:1;}}
+
+  /* ---------- section shared ---------- */
+  section{position:relative;padding:150px 0;}
+  @media(max-width:768px){section{padding:96px 0;}}
+  .section-head{max-width:760px;margin-bottom:64px;}
+  .section-head h2{font-size:clamp(32px,5vw,58px);margin-top:18px;color:var(--white);}
+  .section-hint{font-family:var(--mono);font-size:12.5px;color:var(--gray-dim);margin-top:16px;letter-spacing:.02em;}
+  .divider{border:none;border-top:1px solid var(--line);}
+  .section-watermark{
+    position:absolute;opacity:.04;pointer-events:none;z-index:0;animation:spin-slow 140s linear infinite;
+  }
+  @media(max-width:760px){.section-watermark{display:none;}}
+  .texture-band{
+    height:70px;background-image:url('assets/textura.jpg');background-size:340px;background-repeat:repeat;
+    opacity:.05;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+
+  /* ---------- sobre ---------- */
+  .sobre{border-top:1px solid var(--line);position:relative;overflow:hidden;}
+  .sobre-photo{
+    position:absolute;inset:0;
+    background-image:url('assets/photos/sobre-collage.jpg');
+    background-size:cover;background-position:center;
+    opacity:.16;filter:grayscale(1);pointer-events:none;
+  }
+  .sobre-photo::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(to left, var(--black) 0%, var(--black) 15%, transparent 70%);
+  }
+  .sobre-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:start;}
+  @media(max-width:900px){.sobre-grid{grid-template-columns:1fr;gap:40px;}}
+  .sobre p{font-size:19px;line-height:1.7;color:var(--gray);margin-bottom:22px;}
+  .sobre p strong{color:var(--white);font-weight:600;}
+  .sobre-mark{
+    width:100%;aspect-ratio:1/1;max-width:340px;margin-left:auto;
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--line);position:relative;
+  }
+  .sobre-mark-img{width:46%;opacity:.92;position:relative;z-index:2;animation:spin-slow 60s linear infinite;}
+  .sobre-mark::before{
+    content:"";position:absolute;inset:16px;border:1px solid var(--line-2);
+  }
+  .sobre-mark-ring{
+    position:absolute;inset:38px;border:1px dashed var(--line-2);border-radius:50%;
+    animation:spin-slow 90s linear infinite reverse;
+  }
+  @media(max-width:900px){.sobre-mark{margin:0 auto;}}
+
+  /* ---------- numeros ---------- */
+  .numeros{background:var(--black-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:130px 0;}
+  .numeros-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+  .numeros-glow{
+    position:absolute;left:50%;top:38%;width:900px;height:900px;transform:translate(-50%,-50%);
+    background:radial-gradient(circle,rgba(254,202,64,.14) 0%,rgba(254,202,64,0) 68%);
+    transition:transform .2s linear;
+  }
+  .numeros-grid-lines{
+    position:absolute;inset:-2px;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 88px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 88px);
+    -webkit-mask-image:radial-gradient(circle at 50% 40%, black 0%, transparent 72%);
+            mask-image:radial-gradient(circle at 50% 40%, black 0%, transparent 72%);
+  }
+  .numeros-symbol{
+    position:absolute;right:-6%;bottom:-14%;width:520px;opacity:.05;
+    animation:spin-slow 120s linear infinite;
+  }
+  @media(max-width:760px){.numeros-symbol{width:320px;}}
+  .numeros-inner{position:relative;z-index:2;}
+
+  .num-hero{
+    margin-top:60px;padding-bottom:46px;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;
+  }
+  .num-hero-figure{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;}
+  .num-hero-val{
+    font-family:var(--mono);font-weight:600;color:var(--yellow);letter-spacing:-.03em;
+    font-size:clamp(64px,10vw,150px);line-height:.9;
+    text-shadow:0 0 60px rgba(254,202,64,.35);
+  }
+  .num-hero-lbl{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);padding-bottom:.6em;}
+  .num-gauge{width:220px;height:130px;flex:none;}
+  #numGaugeFill{transition:stroke-dashoffset .1s linear;}
+  #numGaugeNeedle{transform-origin:110px 110px;transform:rotate(-90deg);transition:transform .1s linear;}
+  @media(max-width:640px){.num-gauge{width:150px;height:90px;}}
+
+  .num-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0 28px;margin-top:0;}
+  .num-item{padding:38px 0 0;border-top:1px solid var(--line);}
+  .num-item-line{height:1px;background:var(--yellow);width:0;margin-bottom:22px;transition:width 1.1s var(--ease);}
+  .num-item.is-visible .num-item-line{width:36px;}
+  .num-item-val{font-family:var(--mono);font-weight:600;font-size:clamp(30px,3.4vw,44px);color:var(--white);letter-spacing:-.02em;}
+  .num-item-lbl{font-size:13.5px;color:var(--gray);margin-top:10px;letter-spacing:.02em;max-width:26ch;}
+
+  /* ---------- competicoes ---------- */
+  .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(max-width:900px){.comp-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.comp-grid{grid-template-columns:1fr;}}
+  .comp-card{
+    background:var(--black);padding:40px 28px;min-height:190px;width:100%;
+    display:flex;flex-direction:column;justify-content:space-between;gap:26px;
+    transition:background .4s var(--ease);
+    border:none;text-align:left;font:inherit;color:inherit;cursor:pointer;position:relative;overflow:hidden;
+  }
+  .comp-card::before{
+    content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;
+    background:url('assets/ND_outline_white.png') center/contain no-repeat;
+    opacity:.035;transition:opacity .4s, transform .6s var(--ease);pointer-events:none;
+  }
+  .comp-card:hover::before{opacity:.07;transform:rotate(12deg) scale(1.08);}
+  .comp-card:hover{background:var(--black-3);}
+  .comp-card svg{width:30px;height:30px;stroke:var(--yellow);fill:none;stroke-width:1.4;transition:transform .4s var(--ease);}
+  .comp-card:hover svg{transform:translateY(-4px);}
+  .comp-card h3{font-family:var(--body);font-weight:700;font-size:19px;text-transform:none;letter-spacing:0;color:var(--white);}
+  .comp-card .tag{font-family:var(--mono);font-size:11px;color:var(--gray-dim);letter-spacing:.08em;text-transform:uppercase;}
+  .comp-card .go{
+    position:absolute;right:22px;bottom:22px;font-family:var(--mono);font-size:18px;color:var(--yellow);
+    opacity:0;transform:translate(-6px,6px);transition:opacity .35s, transform .35s;
+  }
+  .comp-card:hover .go{opacity:1;transform:translate(0,0);}
+
+  /* ---------- collabs marquee ---------- */
+  .collabs{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:110px 0;}
+  .marquee{overflow:hidden;position:relative;}
+  .marquee::before, .marquee::after{
+    content:"";position:absolute;top:0;bottom:0;width:110px;z-index:2;pointer-events:none;
+  }
+  .marquee::before{left:0;background:linear-gradient(90deg,var(--black),transparent);}
+  .marquee::after{right:0;background:linear-gradient(-90deg,var(--black),transparent);}
+  .marquee-track{display:flex;width:max-content;animation:scrollx 32s linear infinite;}
+  .marquee:hover .marquee-track{animation-play-state:paused;}
+  @keyframes scrollx{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .marquee-item{
+    font-family:var(--display);font-size:clamp(34px,5.2vw,64px);text-transform:uppercase;
+    color:transparent;-webkit-text-stroke:1px var(--line-2);
+    padding:0 46px;display:flex;align-items:center;gap:46px;white-space:nowrap;
+    transition:color .35s, -webkit-text-stroke .35s;
+    background:none;border:none;font-weight:inherit;cursor:pointer;
+  }
+  .marquee-item:hover{color:var(--yellow);-webkit-text-stroke:1px var(--yellow);}
+  .marquee-item .sep{width:8px;height:8px;border-radius:50%;background:var(--yellow);-webkit-text-stroke:0;}
+
+  /* ---------- servicos ---------- */
+  .servicos-list{border-top:1px solid var(--line);}
+  .serv-row{
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:26px 0;border-bottom:1px solid var(--line);
+    transition:padding-left .4s var(--ease);
+  }
+  .serv-row:hover{padding-left:14px;}
+  .serv-row .name{font-family:var(--display);font-size:clamp(20px,2.8vw,32px);text-transform:uppercase;color:var(--white);}
+  .serv-row .idx{font-family:var(--mono);font-size:12px;color:var(--gray-dim);}
+  .serv-row .arrow{
+    font-family:var(--mono);color:var(--yellow);opacity:0;transform:translateX(-8px);
+    transition:opacity .35s, transform .35s;font-size:20px;
+  }
+  .serv-row:hover .arrow{opacity:1;transform:translateX(0);}
+
+  /* ---------- diferencial ---------- */
+  .diferencial{border-top:1px solid var(--line);}
+  .dif-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px;}
+  @media(max-width:900px){.dif-cards{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.dif-cards{grid-template-columns:1fr;}}
+  .dif-card{background:var(--black);padding:38px 30px;display:flex;flex-direction:column;transition:background .4s var(--ease);}
+  .dif-card:hover{background:var(--black-3);}
+  .dif-card-line{height:1px;background:var(--yellow);width:0;margin-bottom:22px;transition:width 1.1s var(--ease);}
+  .dif-card.is-visible .dif-card-line{width:28px;}
+  .dif-card .num{font-family:var(--mono);font-size:12.5px;color:var(--yellow);letter-spacing:.08em;margin-bottom:14px;}
+  .dif-card h3{font-family:var(--display);font-weight:400;font-size:22px;text-transform:uppercase;color:var(--white);line-height:1.15;margin-bottom:14px;}
+  .dif-card p{font-size:14.5px;line-height:1.65;color:var(--gray);}
+
+  /* ---------- manifesto ---------- */
+  .manifesto{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;}
+  .manifesto .wrap{position:relative;z-index:2;}
+  .manifesto-lines p{
+    font-family:var(--display);font-size:clamp(22px,4.4vw,52px);text-transform:uppercase;
+    color:var(--gray-dim);line-height:1.28;transition:color .6s var(--ease);
+    text-wrap:balance;
+  }
+  .manifesto-lines p.on{color:var(--white);}
+  .manifesto-lines p.accent.on{color:var(--yellow);}
+  .manifesto-bg{
+    position:absolute;inset:0;background-image:url('assets/textura.jpg');background-size:520px;
+    opacity:.045;pointer-events:none;
+  }
+  .manifesto-photo{
+    position:absolute;inset:0;background-image:url('assets/photos/stadium-huddle-moscow.jpg');
+    background-size:cover;background-position:center 62%;
+    filter:grayscale(1) contrast(1.1) brightness(.5);
+    opacity:.5;pointer-events:none;
+  }
+  .manifesto-photo::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse at 50% 50%, rgba(10,10,10,.25) 0%, var(--black) 78%);
+  }
+
+  /* ---------- contato ---------- */
+  .contato{padding-top:150px;}
+  .contato-head{margin-bottom:60px;}
+  .contato h2{font-size:clamp(38px,6.6vw,86px);line-height:1.12;max-width:16ch;text-wrap:balance;}
+  .contato-lede{font-size:17px;line-height:1.8;color:var(--gray);max-width:46ch;margin-top:26px;}
+  .contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;padding-bottom:70px;border-bottom:1px solid var(--line);}
+  @media(max-width:900px){.contato-grid{grid-template-columns:1fr;gap:52px;}}
+  .contato-intro{display:flex;flex-direction:column;}
+  .contato-ctas{display:flex;flex-direction:column;align-items:flex-start;gap:16px;margin-top:40px;}
+  .contato-cta{
+    font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--black);
+    background:var(--yellow);padding:20px 34px;border-radius:2px;display:inline-flex;align-items:center;gap:12px;
+    transition:transform .35s var(--ease), background .3s;white-space:nowrap;
+  }
+  .contato-cta:hover{transform:translateY(-3px);background:var(--white);}
+  .copy-feedback{
+    font-family:var(--mono);font-size:12px;color:var(--yellow);opacity:0;transition:opacity .3s;
+  }
+  .copy-feedback.show{opacity:1;}
+
+  .contato-info-list{display:flex;flex-direction:column;}
+  .info-block{padding:22px 0;border-bottom:1px solid var(--line);}
+  .contato-info-list .info-block:last-child{border-bottom:none;}
+  .info-block .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-dim);margin-bottom:10px;}
+  .info-block .v{font-size:18px;color:var(--white);font-weight:600;}
+  .info-block .v.muted{color:var(--gray);font-weight:400;font-style:italic;font-size:15px;}
+
+  .contato-form{
+    background:var(--black-2);border:1px solid var(--line-2);border-radius:6px;
+    padding:44px;display:flex;flex-direction:column;gap:24px;
+  }
+  @media(max-width:640px){.contato-form{padding:30px 24px;}}
+  .form-row{display:flex;flex-direction:column;gap:11px;}
+  .form-row label{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);}
+  .form-row input, .form-row select, .form-row textarea{
+    width:100%;background:var(--black);border:1px solid var(--line-2);color:var(--white);
+    padding:14px 16px;border-radius:3px;font-family:var(--body);font-size:15px;line-height:1.5;
+    transition:border-color .3s;
+  }
+  .form-row input::placeholder, .form-row textarea::placeholder{color:var(--gray-dim);}
+  .form-row input:focus, .form-row select:focus, .form-row textarea:focus{outline:none;border-color:var(--yellow);}
+  .form-row select{cursor:pointer;}
+  .form-row textarea{resize:vertical;min-height:120px;line-height:1.6;}
+  .contato-form-submit{
+    width:100%;justify-content:center;border:none;cursor:pointer;margin-top:4px;
+    font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+  }
+  .contato-form-hint{font-family:var(--mono);font-size:11.5px;color:var(--gray-dim);line-height:1.7;text-align:center;}
+  .contato-form-feedback{
+    font-family:var(--mono);font-size:12px;color:var(--yellow);text-align:center;min-height:1.2em;
+  }
+
+  footer{padding:40px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  footer .fbrand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;color:var(--gray-dim);letter-spacing:.05em;}
+  footer .fbrand img{width:16px;height:16px;opacity:.6;}
+  footer .flinks{display:flex;gap:26px;font-family:var(--mono);font-size:11.5px;color:var(--gray-dim);letter-spacing:.05em;}
+  footer .flinks a:hover{color:var(--yellow);}
+
+  :focus-visible{outline:2px solid var(--yellow);outline-offset:3px;}
+  .skip-link{
+    position:fixed;top:-60px;left:16px;z-index:1000;background:var(--yellow);color:var(--black);
+    padding:12px 20px;border-radius:2px;font-family:var(--mono);font-size:13px;font-weight:600;
+    transition:top .3s var(--ease);
+  }
+  .skip-link:focus{top:16px;}
+
+  /* ---------- custom cursor (signature) ---------- */
+  body.has-fine-cursor{cursor:none;}
+  body.has-fine-cursor a, body.has-fine-cursor button{cursor:none;}
+  .cursor-wrap{
+    position:fixed;top:0;left:0;width:28px;height:28px;pointer-events:none;z-index:9999;
+    transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;
+  }
+  .cursor-wrap.on{opacity:1;}
+  .cursor-ring{position:absolute;inset:0;border:1px solid rgba(245,245,243,.45);border-radius:50%;transition:transform .25s var(--ease), border-color .25s;}
+  .cursor-needle{position:absolute;left:50%;top:50%;width:1px;height:11px;background:var(--yellow);transform-origin:top center;margin-left:-.5px;transition:height .25s;}
+  .cursor-dot{position:absolute;left:50%;top:50%;width:3px;height:3px;background:var(--yellow);border-radius:50%;transform:translate(-50%,-50%);}
+  .cursor-wrap.active .cursor-ring{transform:scale(2.1);border-color:var(--yellow);}
+  .cursor-wrap.active .cursor-needle{opacity:0;}
+
+  /* ---------- tilt hover ---------- */
+  .tilt{transform-style:preserve-3d;will-change:transform;transition:transform .35s var(--ease);}
+
+  /* ---------- content modal ---------- */
+  .content-modal{
+    position:fixed;inset:0;z-index:200;display:flex;align-items:flex-end;justify-content:center;
+    visibility:hidden;pointer-events:none;
+  }
+  .content-modal.open{visibility:visible;pointer-events:auto;}
+  .content-modal-backdrop{
+    position:absolute;inset:0;background:rgba(6,6,7,.82);backdrop-filter:blur(6px);
+    opacity:0;transition:opacity .45s var(--ease);
+  }
+  .content-modal.open .content-modal-backdrop{opacity:1;}
+  .content-modal-panel{
+    position:relative;width:100%;max-width:980px;max-height:88vh;overflow-y:auto;
+    background:var(--black-2);border:1px solid var(--line-2);border-top:1px solid var(--yellow-dim);
+    border-radius:6px 6px 0 0;padding:56px 48px 64px;
+    transform:translateY(3%);opacity:0;transition:transform .5s var(--ease), opacity .5s var(--ease);
+  }
+  @media(max-width:700px){.content-modal-panel{padding:70px 22px 46px;max-height:92vh;}}
+  .content-modal.open .content-modal-panel{transform:translateY(0);opacity:1;}
+  .content-modal-close{
+    position:absolute;top:24px;right:28px;background:none;border:1px solid var(--line-2);color:var(--white);
+    width:38px;height:38px;border-radius:50%;font-size:15px;cursor:pointer;transition:border-color .3s, transform .3s;
+  }
+  .content-modal-close:hover{border-color:var(--yellow);color:var(--yellow);transform:rotate(90deg);}
+  .content-modal-head h3{font-size:clamp(28px,4vw,44px);color:var(--white);margin-top:14px;}
+  .content-modal-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px;}
+  .content-modal-tags span{
+    font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--gray);
+    border:1px solid var(--line-2);border-radius:20px;padding:6px 13px;
+  }
+  .content-modal-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px;
+  }
+  @media(max-width:700px){.content-modal-grid{grid-template-columns:repeat(2,1fr);}}
+  .cm-search{
+    width:100%;margin-top:28px;background:var(--black);border:1px solid var(--line-2);color:var(--white);
+    padding:14px 18px;border-radius:3px;font-family:var(--body);font-size:14px;
+  }
+  .cm-search::placeholder{color:var(--gray-dim);}
+  .cm-search:focus{outline:none;border-color:var(--yellow);}
+  .cm-card{
+    aspect-ratio:4/5;position:relative;overflow:hidden;border-radius:3px;
+    background:var(--black-3);border:none;padding:0;cursor:pointer;
+  }
+  .cm-card img, .cm-card video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
+  .cm-card:hover img, .cm-card:hover video{transform:scale(1.07);}
+  .cm-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(8,8,9,.92) 0%, rgba(8,8,9,.05) 42%, rgba(8,8,9,.3) 100%);}
+  .cm-card-play{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
+    width:38px;height:38px;border:1px solid rgba(245,245,243,.6);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;transition:transform .35s var(--ease), border-color .35s;
+  }
+  .cm-card:hover .cm-card-play{transform:translate(-50%,-50%) scale(1.12);border-color:var(--yellow);}
+  .cm-card-play::after{content:"";border-style:solid;border-width:6px 0 6px 9px;border-color:transparent transparent transparent var(--white);margin-left:2px;}
+  .cm-card-tag{
+    position:absolute;left:10px;top:10px;z-index:2;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--yellow);background:rgba(10,10,10,.55);padding:4px 8px;border-radius:20px;
+  }
+  .cm-card-date{
+    position:absolute;right:10px;top:10px;z-index:2;font-family:var(--mono);font-size:9.5px;
+    color:var(--gray);background:rgba(10,10,10,.55);padding:4px 8px;border-radius:20px;text-transform:capitalize;
+  }
+  .cm-card-reach{
+    position:absolute;right:10px;top:34px;z-index:2;font-family:var(--mono);font-size:9.5px;
+    color:var(--yellow);background:rgba(10,10,10,.55);padding:4px 8px;border-radius:20px;
+  }
+  .cm-card-cap{
+    position:absolute;left:11px;right:11px;bottom:10px;z-index:2;font-size:11px;line-height:1.35;
+    color:var(--gray);text-align:left;font-family:var(--body);
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  .cm-empty{
+    grid-column:1/-1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;
+    padding:56px 20px;color:var(--gray-dim);
+  }
+  .cm-empty img{width:42px;opacity:.3;}
+  .cm-empty p{font-size:13.5px;max-width:36ch;line-height:1.6;}
+  .content-modal-note{
+    margin-top:34px;padding-top:26px;border-top:1px solid var(--line);
+    font-family:var(--mono);font-size:12px;color:var(--gray-dim);line-height:1.7;display:flex;gap:10px;align-items:flex-start;
+  }
+  .content-modal-note svg{flex:none;width:15px;height:15px;stroke:var(--gray-dim);fill:none;stroke-width:1.5;margin-top:2px;}
+  .content-modal-note code{color:var(--gray);}
+
+  .cm-back{
+    background:none;border:none;color:var(--gray);font-family:var(--mono);font-size:12px;letter-spacing:.05em;
+    cursor:pointer;padding:0 0 26px;transition:color .3s;display:inline-flex;align-items:center;gap:8px;
+  }
+  .cm-back:hover{color:var(--yellow);}
+  .cm-player-embed{display:flex;justify-content:center;align-items:flex-start;min-height:340px;}
+  .cm-player-embed iframe{border-radius:8px !important;}
+  .cm-player-meta{max-width:400px;margin:22px auto 0;text-align:center;}
+  .cm-player-title{font-size:16px;color:var(--white);font-weight:600;}
+  .cm-player-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px;}
+  .cm-player-tags span{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--gray);
+    border:1px solid var(--line-2);border-radius:20px;padding:5px 11px;text-transform:capitalize;
+  }
+  .cm-player-date{color:var(--yellow) !important;border-color:var(--yellow-dim) !important;}
+  .cm-player-link{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:12px;color:var(--yellow);letter-spacing:.03em;}
+  .cm-player-link:hover{text-decoration:underline;}
+  .cm-player-nav{display:flex;justify-content:space-between;margin-top:26px;gap:14px;}
+  .cm-player-nav button{
+    font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--white);
+    background:none;border:1px solid var(--line-2);padding:12px 22px;border-radius:2px;cursor:pointer;
+    transition:border-color .3s, color .3s;
+  }
+  .cm-player-nav button:hover:not(:disabled){border-color:var(--yellow);color:var(--yellow);}
+  .cm-player-nav button:disabled{opacity:.3;cursor:not-allowed;}
+</style>
+</head>
+<body>
+
+<a href="#top" class="skip-link">Pular para o conteúdo</a>
+
+<div class="cursor-wrap" id="cursorWrap">
+  <div class="cursor-ring"></div>
+  <div class="cursor-needle" id="cursorNeedle"></div>
+  <div class="cursor-dot"></div>
+</div>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="brand" id="brandMark">
+        <img src="assets/ND_badge_yellowblack.png" alt="" class="brand-badge">
+        <img src="assets/ND_wordmark_white.png" alt="Nodetalhe Content" class="brand-word">
+      </a>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#numeros">Números</a>
+        <a href="#competicoes">Portfólio</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <a href="#contato" class="nav-cta">Entrar em contato</a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#sobre">Sobre</a>
+  <a href="#numeros">Números</a>
+  <a href="#competicoes">Portfólio</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#contato">Contato</a>
+  <a href="#contato" class="nav-cta">Entrar em contato</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-photo"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-glow"></div>
+    <img class="hero-badge" src="assets/ND_outline_yellow.png" alt="">
+    <div class="wrap hero-inner">
+      <div class="eyebrow reveal"><span class="dot"></span>Produtora de conteúdo esportivo</div>
+      <h1 class="reveal reveal-delay-1">O futebol passa rápido.<br><em>Os detalhes ficam.</em></h1>
+      <p class="hero-sub reveal reveal-delay-2">Enquanto todos olham para o placar, nós procuramos aquilo que transforma um jogo em uma história.</p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="#competicoes" class="btn btn-primary">Ver portfólio →</a>
+        <a href="#contato" class="btn btn-ghost">Entrar em contato</a>
+      </div>
+      <div class="hero-stat reveal reveal-delay-4">
+        <div class="num">82M+</div>
+        <div class="lbl">Visualizações<br>em 90 dias</div>
+      </div>
+    </div>
+    <div class="scroll-cue"><span>Role para descobrir</span><span class="line"></span></div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="sobre-photo"></div>
+    <div class="wrap sobre-grid">
+      <div>
+        <div class="eyebrow reveal"><span class="dot"></span>Por que existimos</div>
+        <h2 style="font-size:clamp(32px,5vw,56px);margin-top:18px;color:var(--white);" class="reveal reveal-delay-1">Todo mundo vê<br>o mesmo jogo.</h2>
+        <div style="margin-top:34px;">
+          <p class="reveal reveal-delay-2"><strong>Mas nem todo mundo vê a mesma história.</strong></p>
+          <p class="reveal reveal-delay-3">Existe o lance que vira manchete. E existe o instante que vira lembrança: o olhar, o gesto, o silêncio antes da comemoração.</p>
+          <p class="reveal reveal-delay-4">Foi por acreditar nesse segundo tipo de futebol que a Nodetalhe nasceu, em junho de 2025. Não para registrar partidas. Para revelar o que elas escondem.</p>
+        </div>
+      </div>
+      <div class="sobre-mark reveal reveal-delay-2">
+        <img src="assets/ND_outline_yellow.png" alt="Símbolo Nodetalhe" class="sobre-mark-img">
+        <div class="sobre-mark-ring"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAL -->
+  <section class="diferencial">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0;">
+        <div class="eyebrow reveal"><span class="dot"></span>Diferencial</div>
+        <h2 class="reveal reveal-delay-1">Por que a<br>Nodetalhe?</h2>
+        <p class="section-hint reveal reveal-delay-1">As pessoas não acompanham apenas os jogos. Elas querem conhecer o que está por trás deles.</p>
+      </div>
+      <div class="dif-cards">
+        <div class="dif-card reveal">
+          <div class="dif-card-line"></div>
+          <span class="num">01</span>
+          <h3>Os bastidores</h3>
+          <p>O que acontece longe da câmera oficial: o vestiário, o ônibus, o aquecimento, a espera.</p>
+        </div>
+        <div class="dif-card reveal reveal-delay-1">
+          <div class="dif-card-line"></div>
+          <span class="num">02</span>
+          <h3>Os detalhes</h3>
+          <p>O gesto, o olhar, o silêncio antes da comemoração: tudo aquilo que o replay não mostra.</p>
+        </div>
+        <div class="dif-card reveal reveal-delay-2">
+          <div class="dif-card-line"></div>
+          <span class="num">03</span>
+          <h3>Os personagens</h3>
+          <p>Quem está por trás do escudo: staff, torcida, as pessoas que fazem o clube ser clube.</p>
+        </div>
+        <div class="dif-card reveal reveal-delay-3">
+          <div class="dif-card-line"></div>
+          <span class="num">04</span>
+          <h3>As histórias</h3>
+          <p>O contexto que transforma um lance isolado em algo que fica na memória.</p>
+        </div>
+      </div>
+      <p class="reveal reveal-delay-4" style="font-size:19px;line-height:1.8;color:var(--gray);max-width:64ch;margin-top:48px;">
+        <strong style="color:var(--white);">Transformamos momentos em conteúdos capazes de gerar conexão, alcance e valor para nossos parceiros.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- NUMEROS -->
+  <section class="numeros" id="numeros">
+    <div class="numeros-bg">
+      <div class="numeros-glow" id="numerosGlow"></div>
+      <div class="numeros-grid-lines"></div>
+      <img class="numeros-symbol" src="assets/ND_outline_yellow.png" alt="">
+    </div>
+    <div class="wrap numeros-inner">
+      <div class="section-head" style="margin-bottom:0;">
+        <div class="eyebrow reveal"><span class="dot pulse"></span>Performance</div>
+        <h2 class="reveal reveal-delay-1">Números que <span class="hl">viram</span><br>autoridade.</h2>
+      </div>
+
+      <div class="num-hero reveal reveal-delay-2">
+        <div class="num-hero-figure">
+          <div class="num-hero-val" data-count="82.7" data-decimals="1" data-suffix=" MI">0</div>
+          <div class="num-hero-lbl">Visualizações<br>em 90 dias</div>
+        </div>
+        <svg class="num-gauge" viewBox="0 0 220 130" aria-hidden="true">
+          <path d="M20,110 A90,90 0 0 1 200,110" fill="none" stroke="var(--line-2)" stroke-width="10" stroke-linecap="round"/>
+          <path id="numGaugeFill" d="M20,110 A90,90 0 0 1 200,110" fill="none" stroke="var(--yellow)" stroke-width="10" stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="283"/>
+          <circle id="numGaugeHub" cx="110" cy="110" r="7" fill="var(--yellow)"/>
+          <line id="numGaugeNeedle" x1="110" y1="110" x2="110" y2="38" stroke="var(--white)" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="num-row">
+        <div class="num-item reveal">
+          <div class="num-item-line"></div>
+          <div class="num-item-val" data-count="15.3" data-decimals="1" data-suffix=" mil">0</div>
+          <div class="num-item-lbl">Seguidores construídos com conteúdo, não com impulsionamento.</div>
+        </div>
+        <div class="num-item reveal reveal-delay-1">
+          <div class="num-item-line"></div>
+          <div class="num-item-val" data-count="7378" data-prefix="+" data-thousands="true" data-suffix="">0</div>
+          <div class="num-item-lbl">Crescimento líquido de seguidores nos últimos 90 dias.</div>
+        </div>
+        <div class="num-item reveal reveal-delay-2">
+          <div class="num-item-line"></div>
+          <div class="num-item-val" data-count="7.5" data-decimals="1" data-suffix=" MI">0</div>
+          <div class="num-item-lbl">Contas alcançadas nos últimos 90 dias.</div>
+        </div>
+        <div class="num-item reveal reveal-delay-3">
+          <div class="num-item-line"></div>
+          <div class="num-item-val" data-count="5.47" data-decimals="1" data-suffix=" MI">0</div>
+          <div class="num-item-lbl">Interações registradas no período.</div>
+        </div>
+        <div class="num-item reveal reveal-delay-4">
+          <div class="num-item-line"></div>
+          <div class="num-item-val" data-count="98.2" data-decimals="1" data-suffix="%">0</div>
+          <div class="num-item-lbl">Das visualizações vêm de fora da base de seguidores: gente nova, todo dia.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETICOES -->
+  <section id="competicoes" style="position:relative;">
+    <img class="section-watermark" src="assets/ND_outline_yellow.png" alt="" style="right:-4%;top:6%;width:340px;">
+    <div class="wrap" style="position:relative;z-index:1;">
+      <div class="section-head">
+        <div class="eyebrow reveal"><span class="dot"></span>Portfólio</div>
+        <h2 class="reveal reveal-delay-1">Onde já estivemos.</h2>
+        <p class="section-hint reveal reveal-delay-1">Clique em uma competição e veja os conteúdos produzidos nela.</p>
+      </div>
+      <div class="comp-grid reveal">
+        <button class="comp-card tilt" data-type="competitions" data-key="copa-mundo">
+          <svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M6 3h12v4a6 6 0 0 1-12 0V3z"/><path d="M6 5H3v2a4 4 0 0 0 4 4M18 5h3v2a4 4 0 0 1-4 4"/></svg>
+          <div><h3>Copa do Mundo FIFA</h3><div class="tag">Internacional · Seleções</div></div>
+          <span class="go">↗</span>
+        </button>
+        <button class="comp-card tilt" data-type="competitions" data-key="libertadores">
+          <svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M6 3h12v4a6 6 0 0 1-12 0V3z"/><path d="M6 5H3v2a4 4 0 0 0 4 4M18 5h3v2a4 4 0 0 1-4 4"/></svg>
+          <div><h3>Libertadores</h3><div class="tag">Conmebol · Clubes</div></div>
+          <span class="go">↗</span>
+        </button>
+        <button class="comp-card tilt" data-type="competitions" data-key="brasileirao">
+          <svg viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4z"/></svg>
+          <div><h3>Campeonato Brasileiro</h3><div class="tag">CBF · Série A</div></div>
+          <span class="go">↗</span>
+        </button>
+        <button class="comp-card tilt" data-type="competitions" data-key="copa-brasil">
+          <svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M6 3h12v4a6 6 0 0 1-12 0V3z"/><path d="M6 5H3v2a4 4 0 0 0 4 4M18 5h3v2a4 4 0 0 1-4 4"/></svg>
+          <div><h3>Copa do Brasil</h3><div class="tag">CBF · Mata-mata</div></div>
+          <span class="go">↗</span>
+        </button>
+        <button class="comp-card tilt" data-type="competitions" data-key="eliminatorias">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg>
+          <div><h3>Eliminatórias</h3><div class="tag">Conmebol · Rumo à Copa</div></div>
+          <span class="go">↗</span>
+        </button>
+        <button class="comp-card tilt" data-type="competitions" data-key="selecao">
+          <svg viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4z"/></svg>
+          <div><h3>Seleção Brasileira</h3><div class="tag">CBF · Amistosos e torneios</div></div>
+          <span class="go">↗</span>
+        </button>
+        <button class="comp-card tilt" data-type="competitions" data-key="internacionais">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg>
+          <div><h3>Jogos Internacionais</h3><div class="tag">Turnês · Amistosos globais</div></div>
+          <span class="go">↗</span>
+        </button>
+        <button class="comp-card tilt" data-type="competitions" data-key="paulistao">
+          <svg viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4z"/></svg>
+          <div><h3>Paulistão</h3><div class="tag">FPF · Estadual</div></div>
+          <span class="go">↗</span>
+        </button>
+        <button class="comp-card tilt" data-type="competitions" data-key="sua-foto-no-jogo">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5l1.5-2h5L16 5"/></svg>
+          <div><h3>Sua Foto no Jogo</h3><div class="tag">Nodetalhe · Experiência do torcedor</div></div>
+          <span class="go">↗</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABS -->
+  <section class="collabs">
+    <div class="wrap" style="margin-bottom:44px;">
+      <div class="eyebrow reveal"><span class="dot"></span>Collabs</div>
+      <h2 class="reveal reveal-delay-1" style="font-size:clamp(30px,4.6vw,52px);margin-top:18px;">Quem já contou histórias<br>com a gente.</h2>
+      <p class="section-hint reveal reveal-delay-1">Clique em uma marca e veja o case.</p>
+    </div>
+    <div class="marquee reveal">
+      <div class="marquee-track" id="marqueeTrack">
+        <button class="marquee-item" data-type="partners" data-key="433">433 <span class="sep"></span></button>
+        <button class="marquee-item" data-type="partners" data-key="cbf">CBF <span class="sep"></span></button>
+        <button class="marquee-item" data-type="partners" data-key="botafogo">Botafogo <span class="sep"></span></button>
+        <button class="marquee-item" data-type="partners" data-key="fabrizio">Fabrizio Romano <span class="sep"></span></button>
+        <button class="marquee-item" data-type="partners" data-key="tnt">TNT Sports <span class="sep"></span></button>
+        <button class="marquee-item" data-type="partners" data-key="433">433 <span class="sep"></span></button>
+        <button class="marquee-item" data-type="partners" data-key="cbf">CBF <span class="sep"></span></button>
+        <button class="marquee-item" data-type="partners" data-key="botafogo">Botafogo <span class="sep"></span></button>
+        <button class="marquee-item" data-type="partners" data-key="fabrizio">Fabrizio Romano <span class="sep"></span></button>
+        <button class="marquee-item" data-type="partners" data-key="tnt">TNT Sports <span class="sep"></span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICOS -->
+  <section id="servicos" style="position:relative;">
+    <img class="section-watermark" src="assets/ND_outline_white.png" alt="" style="left:-8%;bottom:-8%;width:380px;opacity:.03;">
+    <div class="wrap" style="position:relative;z-index:1;">
+      <div class="section-head">
+        <div class="eyebrow reveal"><span class="dot"></span>O que fazemos</div>
+        <h2 class="reveal reveal-delay-1">Serviços.</h2>
+      </div>
+      <div class="servicos-list reveal">
+        <div class="serv-row"><span class="idx">01</span><span class="name">Cobertura esportiva</span><span class="arrow">→</span></div>
+        <div class="serv-row"><span class="idx">02</span><span class="name">Conteúdo para redes sociais</span><span class="arrow">→</span></div>
+        <div class="serv-row"><span class="idx">03</span><span class="name">Highlights</span><span class="arrow">→</span></div>
+        <div class="serv-row"><span class="idx">04</span><span class="name">Documentários</span><span class="arrow">→</span></div>
+        <div class="serv-row"><span class="idx">05</span><span class="name">Conteúdo para marcas</span><span class="arrow">→</span></div>
+        <div class="serv-row"><span class="idx">06</span><span class="name">Conteúdo vertical</span><span class="arrow">→</span></div>
+        <div class="serv-row"><span class="idx">07</span><span class="name">Fotografia</span><span class="arrow">→</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="texture-band" aria-hidden="true"></div>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto">
+    <div class="manifesto-photo"></div>
+    <div class="manifesto-bg"></div>
+    <div class="wrap">
+      <div class="manifesto-lines" id="manifestoLines">
+        <p>O futebol não acontece apenas quando a bola rola.</p>
+        <p>Ele acontece no olhar do torcedor.</p>
+        <p>Na arquibancada. No silêncio antes do apito.</p>
+        <p>Na comemoração. Na chuva. Na emoção.</p>
+        <p class="accent">Nos detalhes.</p>
+        <p class="accent">É ali que contamos nossas histórias.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="wrap">
+      <div class="contato-head">
+        <h2 class="reveal">Vamos contar a<br>próxima história?</h2>
+        <p class="contato-lede reveal reveal-delay-1">Cada projeto começa com uma boa conversa. Conte para a gente o que você está pensando e vamos transformar essa ideia em uma história feita para conectar.</p>
+      </div>
+      <div class="contato-grid">
+        <div class="contato-intro">
+          <div class="contato-info-list">
+            <div class="info-block reveal reveal-delay-2">
+              <div class="k">E-mail</div>
+              <div class="v"><a href="mailto:contato@nodetalhecontent.com">contato@nodetalhecontent.com</a></div>
+            </div>
+            <div class="info-block reveal reveal-delay-2">
+              <div class="k">WhatsApp</div>
+              <div class="v"><a href="https://wa.me/5511987224375" target="_blank" rel="noopener">+55 11 98722-4375</a></div>
+            </div>
+            <div class="info-block reveal reveal-delay-2">
+              <div class="k">Instagram</div>
+              <div class="v" id="contatoInstagram"><a href="https://www.instagram.com/nodetalhecontent_/" target="_blank" rel="noopener">@nodetalhecontent_</a></div>
+            </div>
+          </div>
+
+          <div class="contato-ctas reveal reveal-delay-2">
+            <a href="https://wa.me/5511987224375?text=Ol%C3%A1!%20Conheci%20o%20trabalho%20da%20Nodetalhe%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="contato-cta">Conversar direto pelo WhatsApp →</a>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <button class="btn btn-ghost" id="copyContactBtn" type="button">Copiar contato</button>
+            </div>
+            <span class="copy-feedback" id="copyFeedback" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <form class="contato-form reveal reveal-delay-1" id="contatoForm">
+          <div class="form-row">
+            <label for="cfNome">Nome</label>
+            <input type="text" id="cfNome" name="nome" required placeholder="Como podemos te chamar?">
+          </div>
+          <div class="form-row">
+            <label for="cfEmpresa">Instagram ou empresa</label>
+            <input type="text" id="cfEmpresa" name="empresa" placeholder="@seuclube ou nome da empresa">
+          </div>
+          <div class="form-row">
+            <label for="cfTipo">Tipo de projeto</label>
+            <select id="cfTipo" name="tipo">
+              <option>Cobertura esportiva</option>
+              <option>Conteúdo para redes sociais</option>
+              <option>Documentário</option>
+              <option>Conteúdo para marcas</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="cfMensagem">Mensagem</label>
+            <textarea id="cfMensagem" name="mensagem" rows="4" required placeholder="Conte um pouco sobre o projeto que você tem em mente."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary contato-form-submit">Enviar pelo WhatsApp →</button>
+          <p class="contato-form-hint">Ao enviar, o WhatsApp abre com a mensagem já pronta para você confirmar o envio.</p>
+          <p class="contato-form-feedback" id="contatoFormFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div class="fbrand">
+        <img src="assets/ND_outline_white.png" alt="" style="width:16px;height:16px;opacity:.6;">
+        <img src="assets/ND_wordmark_white.png" alt="Nodetalhe Content" style="height:13px;width:auto;opacity:.75;">
+        <span>· fundada em 2025</span>
+      </div>
+      <div class="flinks">
+        <a href="#sobre">Sobre</a>
+        <a href="#competicoes">Portfólio</a>
+        <a href="#contato">Contato</a>
+        <a href="https://www.instagram.com/nodetalhecontent_/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<div class="content-modal" id="contentModal" aria-hidden="true">
+  <div class="content-modal-backdrop" data-close></div>
+  <div class="content-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="content-modal-close" data-close aria-label="Fechar">✕</button>
+
+    <div id="cmGalleryView">
+      <div class="content-modal-head">
+        <div class="eyebrow"><span class="dot"></span><span id="modalEyebrow"></span></div>
+        <h3 id="modalTitle"></h3>
+        <div class="content-modal-tags" id="modalTags"></div>
+      </div>
+      <input class="cm-search" id="modalSearch" type="text" aria-label="Buscar por palavra-chave nesta categoria" placeholder="Buscar por palavra-chave nesta categoria…">
+      <div class="content-modal-grid" id="modalGrid"></div>
+      <div class="content-modal-note">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+        <span id="modalNote"></span>
+      </div>
+    </div>
+
+    <div id="cmPlayerView" hidden>
+      <button class="cm-back" id="cmBack">← Voltar à galeria</button>
+      <div class="cm-player-embed" id="cmPlayerEmbed"></div>
+      <div class="cm-player-meta" id="cmPlayerMeta"></div>
+      <div class="cm-player-nav">
+        <button id="cmPrev">← Anterior</button>
+        <button id="cmNext">Próximo →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // header scroll state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // mobile menu
+  const burger = document.getElementById('burgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    menu.classList.toggle('open');
+    burger.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+  }));
+
+  // scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // manifesto line-by-line reveal tied to scroll position
+  const manifestoLines = document.querySelectorAll('#manifestoLines p');
+  const mio = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        manifestoLines.forEach((p, i) => setTimeout(() => p.classList.add('on'), i * 260));
+        mio.disconnect();
+      }
+    });
+  }, { threshold: 0.4 });
+  if (manifestoLines.length) mio.observe(document.querySelector('.manifesto'));
+
+  // números — count-up animation
+  function formatCount(val, decimals, suffix, prefix, thousands){
+    let n = decimals ? val.toFixed(decimals) : Math.round(val).toString();
+    let [intPart, decPart] = n.split('.');
+    if (thousands) intPart = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    let s = decPart ? intPart + ',' + decPart : intPart;
+    return (prefix || '') + s + (suffix || '');
+  }
+  function animateCount(el){
+    const target = parseFloat(el.dataset.count);
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    const suffix = el.dataset.suffix || '';
+    const prefix = el.dataset.prefix || '';
+    const thousands = el.dataset.thousands === 'true';
+    const duration = 1700;
+    const t0 = performance.now();
+    function tick(now){
+      const p = Math.min((now - t0) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = formatCount(target * eased, decimals, suffix, prefix, thousands);
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  const countEls = document.querySelectorAll('[data-count]');
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); }
+    });
+  }, { threshold: 0.5 });
+  countEls.forEach(el => cio.observe(el));
+
+  // números — gauge decorativo (inspirado no símbolo da marca) sincronizado com o hero
+  function animateGauge(){
+    const fillEl = document.getElementById('numGaugeFill');
+    const needle = document.getElementById('numGaugeNeedle');
+    if (!fillEl || !needle) return;
+    const target = 0.88; // leitura decorativa — representa alta performance, não uma métrica literal
+    const duration = 1700;
+    const t0 = performance.now();
+    function tick(now){
+      const p = Math.min((now - t0) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const progress = target * eased;
+      fillEl.style.strokeDashoffset = String(283 * (1 - progress));
+      needle.style.transform = `rotate(${-90 + progress * 180}deg)`;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  const numHeroEl = document.querySelector('.num-hero');
+  if (numHeroEl) {
+    const gio = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { animateGauge(); gio.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    gio.observe(numHeroEl);
+  }
+
+  // números — glow parallax tied to scroll position
+  const numerosSection = document.getElementById('numeros');
+  const numerosGlow = document.getElementById('numerosGlow');
+  if (numerosSection && numerosGlow) {
+    window.addEventListener('scroll', () => {
+      const rect = numerosSection.getBoundingClientRect();
+      const progress = 1 - Math.min(Math.max(rect.top / window.innerHeight, 0), 1);
+      numerosGlow.style.transform = `translate(-50%,-50%) translateY(${(progress - 0.5) * 70}px) scale(${1 + progress * 0.18})`;
+    }, { passive: true });
+  }
+
+  // subtle parallax on hero badge
+  const heroBadge = document.querySelector('.hero-badge');
+  if (heroBadge && matchMedia('(min-width:1000px)').matches) {
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      heroBadge.style.transform = `translateY(${y * 0.18}px) rotate(${y * 0.03}deg)`;
+    }, { passive: true });
+  }
+
+  /* =========================================================
+     CONTEÚDO — PORTFÓLIO & COLLABS, alimentados automaticamente
+     pelo Instagram da Nodetalhe.
+     ---------------------------------------------------------
+     data/categories.json  → coleções (competições, parceiros, e no
+                              futuro clubes/atletas) + hashtags/keywords
+     data/content.json     → posts já sincronizados, curados e
+                              classificados (gerado por
+                              scripts/sync-instagram.js + apply-overrides.js)
+
+     Se esses arquivos não carregarem (ex.: abrindo o index.html
+     direto como arquivo, sem servidor), o portfólio cai num estado
+     vazio com um aviso — nunca mostra conteúdo inventado.
+  ========================================================= */
+  let DATA = { categories: { collections: [] }, content: { items: [] } };
+  let dataLoaded = false;
+
+  const TYPE_TO_FIELD = { competitions: 'competitions', partners: 'partners', clubs: 'clubs', athletes: 'athletes' };
+  const TYPE_TO_SINGULAR = { competitions: 'competition', partners: 'partner', clubs: 'club', athletes: 'athlete' };
+
+  const dataLoadPromise = (async () => {
+    try {
+      const [cats, content] = await Promise.all([
+        fetch('data/categories.json').then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }),
+        fetch('data/content.json').then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }),
+      ]);
+      DATA.categories = cats;
+      DATA.content = content;
+      dataLoaded = true;
+    } catch (err) {
+      console.warn('[Nodetalhe] Não foi possível carregar data/categories.json ou data/content.json — sirva o projeto por http (veja README.md).', err);
+    }
+  })();
+
+  function findEntry(type, key) {
+    const singular = TYPE_TO_SINGULAR[type];
+    return (DATA.categories.collections || []).find(e => e.type === singular && e.key === key) || null;
+  }
+  function itemsFor(type, key) {
+    const field = TYPE_TO_FIELD[type];
+    return (DATA.content.items || []).filter(i => (i[field] || []).includes(key));
+  }
+  function collectionName(type, key) {
+    return findEntry(type, key)?.name || key;
+  }
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+  function normalizeSimple(s) { return (s || '').toLowerCase(); }
+  function formatDate(iso) {
+    if (!iso) return '';
+    try { return new Date(iso).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }); }
+    catch { return ''; }
+  }
+
+  const modal = document.getElementById('contentModal');
+  const cmGalleryView = document.getElementById('cmGalleryView');
+  const cmPlayerView = document.getElementById('cmPlayerView');
+  const modalEyebrow = document.getElementById('modalEyebrow');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalTags = document.getElementById('modalTags');
+  const modalSearch = document.getElementById('modalSearch');
+  const modalGrid = document.getElementById('modalGrid');
+  const modalNote = document.getElementById('modalNote');
+  const cmBack = document.getElementById('cmBack');
+  const cmPrev = document.getElementById('cmPrev');
+  const cmNext = document.getElementById('cmNext');
+  const cmPlayerEmbed = document.getElementById('cmPlayerEmbed');
+
+  let categoryItems = [];
+  let currentList = [];
+  let currentIndex = 0;
+
+  function paintGrid(list) {
+    modalGrid.innerHTML = '';
+    if (!list.length) {
+      modalGrid.innerHTML = `<div class="cm-empty">
+        <img src="assets/ND_outline_white.png" alt="">
+        <p>${dataLoaded
+          ? 'Nenhum conteúdo sincronizado ainda nesta categoria. Assim que sair um post com essa marcação no Instagram da Nodetalhe, ele aparece aqui automaticamente.'
+          : 'Não foi possível carregar os dados do portfólio agora.'}</p>
+      </div>`;
+      return;
+    }
+    list.forEach((item, i) => {
+      const card = document.createElement('button');
+      card.className = 'cm-card';
+      const formatLabel = item.mediaType === 'VIDEO' ? 'Reel' : item.mediaType === 'CAROUSEL_ALBUM' ? 'Carrossel' : 'Post';
+      const media = item.localVideo
+        ? `<video src="${item.localVideo}" muted preload="metadata" playsinline></video>`
+        : `<img src="${item.thumbnail}" alt="" loading="lazy">`;
+      const dateBadge = item.date ? `<span class="cm-card-date">${formatDate(item.date)}</span>` : '';
+      const reachBadge = item.reach ? `<span class="cm-card-reach">${escapeHtml(item.reach)}</span>` : '';
+      card.innerHTML = `
+        ${media}
+        <span class="cm-card-tag">${formatLabel}${item.featured ? ' · Destaque' : ''}</span>
+        ${dateBadge}
+        ${reachBadge}
+        <div class="cm-card-play"></div>
+        <span class="cm-card-cap">${escapeHtml(item.title || item.captionShort)}</span>`;
+      card.setAttribute('aria-label', `Abrir ${item.title || 'post'}${item.date ? ', publicado em ' + formatDate(item.date) : ''}`);
+      card.addEventListener('click', () => openPlayer(i));
+      modalGrid.appendChild(card);
+    });
+  }
+
+  async function openModal(type, key, btn) {
+    await dataLoadPromise;
+    const entry = findEntry(type, key);
+    const name = entry?.name || btn?.dataset.name || key;
+    const tag = entry?.tag || '';
+    const hashtags = entry?.match?.hashtags || [];
+
+    modalEyebrow.textContent = type === 'competitions' ? 'Portfólio · Competição' : 'Collab · Case';
+    modalTitle.textContent = name;
+    modalTags.innerHTML = hashtags.map(h => `<span>${h}</span>`).join('') + (tag ? `<span>${tag}</span>` : '');
+
+    categoryItems = itemsFor(type, key);
+    currentList = categoryItems.slice();
+    modalSearch.value = '';
+    paintGrid(currentList);
+
+    modalNote.textContent = !dataLoaded
+      ? 'Não consegui carregar data/categories.json e data/content.json. Se você abriu este arquivo direto no navegador, sirva a pasta por http (ex.: "npx serve ."). Veja o README.'
+      : currentList.length
+        ? `${currentList.length} conteúdo${currentList.length > 1 ? 's' : ''} sincronizado${currentList.length > 1 ? 's' : ''} automaticamente do Instagram da Nodetalhe.`
+        : 'Esta galeria sincroniza automaticamente com o Instagram da Nodetalhe por hashtags e palavras-chave.';
+
+    cmPlayerView.hidden = true;
+    cmGalleryView.hidden = false;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  modalSearch.addEventListener('input', () => {
+    const q = normalizeSimple(modalSearch.value);
+    currentList = q ? categoryItems.filter(i => normalizeSimple(i.caption).includes(q)) : categoryItems.slice();
+    paintGrid(currentList);
+  });
+
+  function openPlayer(index) {
+    currentIndex = index;
+    cmGalleryView.hidden = true;
+    cmPlayerView.hidden = false;
+    renderPlayer();
+  }
+  const cmPlayerMeta = document.getElementById('cmPlayerMeta');
+  function renderPlayer() {
+    const item = currentList[currentIndex];
+    if (!item) return;
+    if (item.localVideo) {
+      cmPlayerEmbed.innerHTML = `<video src="${item.localVideo}" controls autoplay playsinline style="max-width:400px;width:100%;border-radius:8px;background:#000;"></video>`;
+    } else {
+      cmPlayerEmbed.innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${item.instagram_url}" data-instgrm-version="14" style="margin:0 auto;max-width:400px;width:100%;"></blockquote>`;
+      if (window.instgrm) window.instgrm.Embeds.process();
+    }
+
+    const chips = [
+      ...(item.competitions || []).map(k => collectionName('competitions', k)),
+      ...(item.partners || []).map(k => collectionName('partners', k)),
+      ...(item.clubs || []).map(k => collectionName('clubs', k)),
+      ...(item.athletes || []).map(k => collectionName('athletes', k)),
+    ];
+    const dateChip = item.date ? `<span class="cm-player-date">${formatDate(item.date)}</span>` : '';
+    const reachChip = item.reach ? `<span class="cm-player-date">${escapeHtml(item.reach)}</span>` : '';
+    const link = item.instagram_url
+      ? `<a class="cm-player-link" href="${item.instagram_url}" target="_blank" rel="noopener">Ver post original no Instagram ↗</a>`
+      : '';
+    cmPlayerMeta.innerHTML = `
+      <div class="cm-player-title">${escapeHtml(item.title)}</div>
+      <div class="cm-player-tags">
+        ${dateChip}
+        ${reachChip}
+        ${chips.map(c => `<span>${escapeHtml(c)}</span>`).join('')}
+      </div>
+      ${link}`;
+
+    cmPrev.disabled = currentIndex <= 0;
+    cmNext.disabled = currentIndex >= currentList.length - 1;
+  }
+  cmPrev.addEventListener('click', () => { if (currentIndex > 0) { currentIndex--; renderPlayer(); } });
+  cmNext.addEventListener('click', () => { if (currentIndex < currentList.length - 1) { currentIndex++; renderPlayer(); } });
+  cmBack.addEventListener('click', () => { cmPlayerView.hidden = true; cmGalleryView.hidden = false; });
+
+  document.querySelectorAll('[data-type][data-key]').forEach(btn => {
+    btn.addEventListener('click', () => openModal(btn.dataset.type, btn.dataset.key, btn));
+  });
+  modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+  // instagram handle no rodapé de contato: se categories.json trouxer um
+  // "profile" no futuro, isso já teria onde plugar. Por ora usa o valor
+  // fixo já presente no HTML (@nodetalhecontent_).
+
+  /* ---------- tilt hover on cards ---------- */
+  if (matchMedia('(pointer:fine)').matches) {
+    document.querySelectorAll('.tilt').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(600px) rotateX(${(-py * 7).toFixed(2)}deg) rotateY(${(px * 7).toFixed(2)}deg) translateZ(4px)`;
+      });
+      card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    });
+  }
+
+  /* ---------- custom cursor (brand signature) ---------- */
+  if (matchMedia('(pointer:fine)').matches) {
+    document.body.classList.add('has-fine-cursor');
+    const cursorWrap = document.getElementById('cursorWrap');
+    const cursorNeedle = document.getElementById('cursorNeedle');
+    let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+    let cx = mx, cy = my;
+    let lastX = mx, lastY = my, angle = 0;
+
+    window.addEventListener('mousemove', (e) => {
+      mx = e.clientX; my = e.clientY;
+      cursorWrap.classList.add('on');
+      const target = e.target.closest('a, button, .comp-card, .marquee-item');
+      cursorWrap.classList.toggle('active', !!target);
+    });
+    window.addEventListener('mouseleave', () => cursorWrap.classList.remove('on'));
+
+    function raf(){
+      cx += (mx - cx) * 0.18;
+      cy += (my - cy) * 0.18;
+      const dx = cx - lastX, dy = cy - lastY;
+      if (Math.hypot(dx, dy) > 0.6) {
+        angle = Math.atan2(dy, dx) * 180 / Math.PI + 90;
+        lastX = cx; lastY = cy;
+      }
+      cursorWrap.style.left = cx + 'px';
+      cursorWrap.style.top = cy + 'px';
+      cursorNeedle.style.transform = `rotate(${angle}deg)`;
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+
+  // contato — copiar e-mail/whatsapp com feedback visual
+  const copyBtn = document.getElementById('copyContactBtn');
+  const copyFeedback = document.getElementById('copyFeedback');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      const text = 'contato@nodetalhecontent.com · +55 11 98722-4375';
+      try {
+        await navigator.clipboard.writeText(text);
+        copyFeedback.textContent = 'Contato copiado ✓';
+      } catch {
+        copyFeedback.textContent = text;
+      }
+      copyFeedback.classList.add('show');
+      clearTimeout(copyBtn._t);
+      copyBtn._t = setTimeout(() => copyFeedback.classList.remove('show'), 2600);
+    });
+  }
+
+  // contato — formulário monta a mensagem e abre o WhatsApp para envio
+  const contatoForm = document.getElementById('contatoForm');
+  const contatoFormFeedback = document.getElementById('contatoFormFeedback');
+  if (contatoForm) {
+    contatoForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nome = contatoForm.nome.value.trim();
+      const empresa = contatoForm.empresa.value.trim();
+      const tipo = contatoForm.tipo.value;
+      const mensagem = contatoForm.mensagem.value.trim();
+
+      let text = `Olá! Meu nome é ${nome}.`;
+      if (empresa) text += ` Sou de ${empresa}.`;
+      text += ` Tenho interesse em: ${tipo}.\n\n${mensagem}`;
+
+      window.open(`https://wa.me/5511987224375?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+      contatoFormFeedback.textContent = 'WhatsApp aberto em uma nova aba. Confirme o envio por lá ✓';
+    });
+  }
+</script>
+</body>
+</html>
