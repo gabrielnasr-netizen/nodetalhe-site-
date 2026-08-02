@@ -190,10 +190,8 @@
   }
   .hero-badge{
     position:absolute;right:6%;top:18%;width:200px;opacity:.9;
-    animation:spin-slow 46s linear infinite;
     pointer-events:none;
   }
-  @keyframes spin-slow{to{transform:rotate(360deg);}}
   @media(max-width:1000px){.hero-badge{width:120px;top:12%;right:4%;opacity:.55;}}
 
   .hero-inner{position:relative;z-index:2;}
@@ -241,7 +239,7 @@
   .section-hint{font-family:var(--mono);font-size:12.5px;color:var(--gray-dim);margin-top:16px;letter-spacing:.02em;}
   .divider{border:none;border-top:1px solid var(--line);}
   .section-watermark{
-    position:absolute;opacity:.04;pointer-events:none;z-index:0;animation:spin-slow 140s linear infinite;
+    position:absolute;opacity:.04;pointer-events:none;z-index:0;
   }
   @media(max-width:760px){.section-watermark{display:none;}}
   .texture-band{
@@ -270,13 +268,12 @@
     display:flex;align-items:center;justify-content:center;
     border:1px solid var(--line);position:relative;
   }
-  .sobre-mark-img{width:46%;opacity:.92;position:relative;z-index:2;animation:spin-slow 60s linear infinite;}
+  .sobre-mark-img{width:46%;opacity:.92;position:relative;z-index:2;}
   .sobre-mark::before{
     content:"";position:absolute;inset:16px;border:1px solid var(--line-2);
   }
   .sobre-mark-ring{
     position:absolute;inset:38px;border:1px dashed var(--line-2);border-radius:50%;
-    animation:spin-slow 90s linear infinite reverse;
   }
   @media(max-width:900px){.sobre-mark{margin:0 auto;}}
 
@@ -298,7 +295,6 @@
   }
   .numeros-symbol{
     position:absolute;right:-6%;bottom:-14%;width:520px;opacity:.05;
-    animation:spin-slow 120s linear infinite;
   }
   @media(max-width:760px){.numeros-symbol{width:320px;}}
   .numeros-inner{position:relative;z-index:2;}
@@ -405,6 +401,7 @@
 
   /* ---------- manifesto ---------- */
   .manifesto{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;}
+  @media(max-width:760px){.manifesto{min-height:auto;padding:110px 0;}}
   .manifesto .wrap{position:relative;z-index:2;}
   .manifesto-lines p{
     font-family:var(--display);font-size:clamp(22px,4.4vw,52px);text-transform:uppercase;
@@ -1152,7 +1149,7 @@
   if (heroBadge && matchMedia('(min-width:1000px)').matches) {
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
-      heroBadge.style.transform = `translateY(${y * 0.18}px) rotate(${y * 0.03}deg)`;
+      heroBadge.style.transform = `translateY(${y * 0.18}px)`;
     }, { passive: true });
   }
 
@@ -1371,7 +1368,7 @@
   }
 
   /* ---------- custom cursor (brand signature) ---------- */
-  if (matchMedia('(pointer:fine)').matches) {
+  if (matchMedia('(pointer:fine)').matches && matchMedia('(min-width:1000px)').matches) {
     document.body.classList.add('has-fine-cursor');
     const cursorWrap = document.getElementById('cursorWrap');
     const cursorNeedle = document.getElementById('cursorNeedle');
