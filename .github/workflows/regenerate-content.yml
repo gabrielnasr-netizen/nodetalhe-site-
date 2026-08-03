@@ -1,0 +1,37 @@
+name: Regenerate content.json
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/videos/**'
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Regenerate data/content.json from assets/videos
+        run: node scripts/build-local-video-items.js
+
+      - name: Commit and push if content.json changed
+        run: |
+          if git diff --quiet -- data/content.json; then
+            echo "No changes to content.json"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/content.json
+          git commit -m "Auto-update content.json from assets/videos"
+          git push
