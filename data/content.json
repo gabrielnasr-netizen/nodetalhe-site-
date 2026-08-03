@@ -651,19 +651,6 @@
       "partners": []
     },
     {
-      "id": "local-paulistao-teste-automacao",
-      "localVideo": "assets/videos/paulistao/teste-automacao.mp4",
-      "mediaType": "VIDEO",
-      "date": null,
-      "title": "Reel 7",
-      "captionShort": "",
-      "caption": "",
-      "competitions": [
-        "paulistao"
-      ],
-      "partners": []
-    },
-    {
       "id": "local-paulistao-1",
       "localVideo": "assets/videos/paulistao/v01.mp4",
       "mediaType": "VIDEO",
