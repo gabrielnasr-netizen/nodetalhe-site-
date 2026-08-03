@@ -1,0 +1,11 @@
+# Números da seção "Performance" do site (nodetalhecontent).
+# Pra atualizar: só troque o número depois do "=" de cada linha.
+# NAO mude o nome antes do "=", e NAO apague o "=".
+# Linhas que comecam com "#" sao só comentario, o site ignora.
+
+visualizacoes_90_dias=82.7
+seguidores_total_mil=15.3
+crescimento_seguidores=7378
+contas_alcancadas_mi=7.5
+interacoes_mi=5.47
+fora_da_base_percent=98.2

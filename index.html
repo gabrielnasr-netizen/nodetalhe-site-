@@ -759,7 +759,7 @@
 
       <div class="num-hero reveal reveal-delay-2">
         <div class="num-hero-figure">
-          <div class="num-hero-val" data-count="82.7" data-decimals="1" data-suffix=" MI">0</div>
+          <div class="num-hero-val" id="statVisualizacoes90Dias" data-count="82.7" data-decimals="1" data-suffix=" MI">0</div>
           <div class="num-hero-lbl">Visualizações<br>em 90 dias</div>
         </div>
         <svg class="num-gauge" viewBox="0 0 220 130" aria-hidden="true">
@@ -773,27 +773,27 @@
       <div class="num-row">
         <div class="num-item reveal">
           <div class="num-item-line"></div>
-          <div class="num-item-val" data-count="15.3" data-decimals="1" data-suffix=" mil">0</div>
+          <div class="num-item-val" id="statSeguidoresTotalMil" data-count="15.3" data-decimals="1" data-suffix=" mil">0</div>
           <div class="num-item-lbl">Seguidores construídos com conteúdo, não com impulsionamento.</div>
         </div>
         <div class="num-item reveal reveal-delay-1">
           <div class="num-item-line"></div>
-          <div class="num-item-val" data-count="7378" data-prefix="+" data-thousands="true" data-suffix="">0</div>
+          <div class="num-item-val" id="statCrescimentoSeguidores" data-count="7378" data-prefix="+" data-thousands="true" data-suffix="">0</div>
           <div class="num-item-lbl">Crescimento líquido de seguidores nos últimos 90 dias.</div>
         </div>
         <div class="num-item reveal reveal-delay-2">
           <div class="num-item-line"></div>
-          <div class="num-item-val" data-count="7.5" data-decimals="1" data-suffix=" MI">0</div>
+          <div class="num-item-val" id="statContasAlcancadasMi" data-count="7.5" data-decimals="1" data-suffix=" MI">0</div>
           <div class="num-item-lbl">Contas alcançadas nos últimos 90 dias.</div>
         </div>
         <div class="num-item reveal reveal-delay-3">
           <div class="num-item-line"></div>
-          <div class="num-item-val" data-count="5.47" data-decimals="1" data-suffix=" MI">0</div>
+          <div class="num-item-val" id="statInteracoesMi" data-count="5.47" data-decimals="1" data-suffix=" MI">0</div>
           <div class="num-item-lbl">Interações registradas no período.</div>
         </div>
         <div class="num-item reveal reveal-delay-4">
           <div class="num-item-line"></div>
-          <div class="num-item-val" data-count="98.2" data-decimals="1" data-suffix="%">0</div>
+          <div class="num-item-val" id="statForaDaBasePercent" data-count="98.2" data-decimals="1" data-suffix="%">0</div>
           <div class="num-item-lbl">Das visualizações vêm de fora da base de seguidores: gente nova, todo dia.</div>
         </div>
       </div>
@@ -1099,13 +1099,47 @@
     }
     requestAnimationFrame(tick);
   }
-  const countEls = document.querySelectorAll('[data-count]');
-  const cio = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); }
-    });
-  }, { threshold: 0.5 });
-  countEls.forEach(el => cio.observe(el));
+  // números — carrega data/stats.txt (arquivo simples, editável à mão) e
+  // sobrescreve os data-count antes de disparar a animação de contagem
+  const STAT_ELEMENT_TO_KEY = {
+    statVisualizacoes90Dias: 'visualizacoes_90_dias',
+    statSeguidoresTotalMil: 'seguidores_total_mil',
+    statCrescimentoSeguidores: 'crescimento_seguidores',
+    statContasAlcancadasMi: 'contas_alcancadas_mi',
+    statInteracoesMi: 'interacoes_mi',
+    statForaDaBasePercent: 'fora_da_base_percent',
+  };
+  async function loadStats(){
+    try {
+      const res = await fetch('data/stats.txt');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const text = await res.text();
+      const values = {};
+      text.split('\n').forEach(line => {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed.startsWith('#')) return;
+        const idx = trimmed.indexOf('=');
+        if (idx === -1) return;
+        values[trimmed.slice(0, idx).trim()] = trimmed.slice(idx + 1).trim();
+      });
+      Object.entries(STAT_ELEMENT_TO_KEY).forEach(([elId, statKey]) => {
+        const el = document.getElementById(elId);
+        if (el && values[statKey] !== undefined) el.dataset.count = values[statKey];
+      });
+    } catch (err) {
+      console.warn('[Nodetalhe] Não foi possível carregar data/stats.txt, usando valores padrão do HTML.', err);
+    }
+  }
+
+  loadStats().then(() => {
+    const countEls = document.querySelectorAll('[data-count]');
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    countEls.forEach(el => cio.observe(el));
+  });
 
   // números — gauge decorativo (inspirado no símbolo da marca) sincronizado com o hero
   function animateGauge(){
